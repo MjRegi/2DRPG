@@ -2,8 +2,9 @@ body{
     background-color: black;
     color:rgb(0, 0, 0);
 }
-#player{
-    height: 1em;
-    width: 1em;
-    background-color: white;
+#player img{
+    height: 20em;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;
 }

@@ -25,7 +25,6 @@ function moveDown(){
     // adding 100 to marginRight
     player.style.marginTop = marginHorizontal + "px";
     // move down
-    console.log(margin);
 } 
 // moving down function
 
