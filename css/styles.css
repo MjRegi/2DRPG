@@ -1,9 +1,14 @@
 body{
     background-color: black;
     color:rgb(0, 0, 0);
+    margin: 0;
+    display: grid;
+    border: 1px solids;
+    grid-template-columns: repeat(10, 300px);
+    grid-template-rows: repeat(10, 300px);
 }
 #player img{
-    height: 20em;
+    height: 300px;
     image-rendering: pixelated;
     image-rendering: crisp-edges;
     image-rendering: -moz-crisp-edges;
