@@ -1,6 +1,21 @@
 const player = document.getElementById("player");
-document.onkeydown = function(w){
-    player.style.top = "-100px"
-}
-document.onkeyup = function(w){
-}
+// creating player
+
+    let marginDown = 100
+    // creating num for margin top (down)
+document.onkeydown = client => {
+    if (client.key == 'w') {
+        moveDown();
+    }
+  };
+  // keydown events
+
+function moveDown(){
+
+        player.style.marginTop = marginDown + "px"
+        // move down
+
+        marginDown += 100;
+    } 
+// moving down function
+// creating movment
