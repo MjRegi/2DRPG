@@ -72,3 +72,29 @@ function moveLeft(){
     return marginVertical
 }
 // creating movment
+
+let game = {
+    player:{
+        hp:100,
+        hunger:100,
+        money:10
+    }
+}
+//creating an object with all things in the game
+
+setInterval(function(){
+    game.player.hunger --
+    if(game.player.hunger < 0){
+        console.log("game over")
+    }
+    
+},100)
+//slowly starve later change to 3000
+
+function damage(dam){
+    game.player.hp -= dam;
+    return game.player.hp;
+}
+//creating function for damaging the player
+console.log("hunger " + game.player.hunger)
+console.log("hp " + game.player.hp)
