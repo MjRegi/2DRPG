@@ -1,6 +1,5 @@
 body{
     background-color: black;
-    color:rgb(0, 0, 0);
     margin: 0;
     display: grid;
     border: 1px solids;
@@ -12,4 +11,17 @@ body{
     image-rendering: pixelated;
     image-rendering: crisp-edges;
     image-rendering: -moz-crisp-edges;
+}
+#bar{
+    color: white;
+    z-index: 100;
+    display: flex;
+    gap: 3em;
+    text-align: center;
+    margin-left: 90vw;
+    position: fixed;
+}
+#bar p{
+    color: white;
+    z-index: 100;
 }

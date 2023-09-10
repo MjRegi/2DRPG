@@ -1,5 +1,9 @@
 const player = document.getElementById("player");
 // creating player
+const hpBar = document.getElementById("hpV");
+const hungerBar = document.getElementById("hungV");
+//bars in the game
+
 
     let marginHorizontal = 0;
     let marginVertical = 0;
@@ -84,9 +88,12 @@ let game = {
 
 setInterval(function(){
     game.player.hunger --
+    hungerBar.innerHTML = game.player.hunger
     if(game.player.hunger < 0){
-        console.log("game over")
+        console.log("game over: hunger")
     }
+    hpBar.innerHTML = game.player.hp;
+    //linking hp bar to hp in interval for constant refresh
     
 },100)
 //slowly starve later change to 3000
