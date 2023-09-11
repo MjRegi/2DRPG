@@ -10,7 +10,7 @@ const hungerBar = document.getElementById("hungV");
     let marginChange = 300;
     // creating num for margins and the change nums
     let coordinates = [0];
-    // coordinates in an array need a fix later but works fine
+    // coordinates in an array need a fix later but works fine upgrade!
     document.onkeydown = client => {
         if (coordinates[0] >= 0 && coordinates[0] < 2700) {
             if (client.key == 's') {
@@ -89,13 +89,20 @@ let game = {
 setInterval(function(){
     game.player.hunger --
     hungerBar.innerHTML = game.player.hunger
-    if(game.player.hunger < 0){
-        console.log("game over: hunger")
+    if(game.player.hunger <= 0){
+        location.reload();
+        console.log("hunger death");
+        // player dies because of hunger (needs to be better soon) upgrade!
     }
     hpBar.innerHTML = game.player.hp;
     //linking hp bar to hp in interval for constant refresh
+    if(game.player.hp <= 0){
+        location.reload();
+        console.log("hp death");
+        //player died because of low hp (needs to be better soon) upgrade!
+    }
     
-},100)
+},1000)
 //slowly starve later change to 3000
 
 function damage(dam){

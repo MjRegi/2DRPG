@@ -1,16 +1,21 @@
+#map{
+    display: grid;
+    grid-template-columns: repeat(10, 300px);
+    grid-template-rows: repeat(10, 300px);
+    place-items: center;
+}
 body{
     background-color: black;
     margin: 0;
-    display: grid;
-    border: 1px solids;
-    grid-template-columns: repeat(10, 300px);
-    grid-template-rows: repeat(10, 300px);
 }
 #player img{
     height: 300px;
     image-rendering: pixelated;
     image-rendering: crisp-edges;
     image-rendering: -moz-crisp-edges;
+}
+#player{
+    z-index: 1;
 }
 #bar{
     color: white;
@@ -24,4 +29,10 @@ body{
 #bar p{
     color: white;
     z-index: 100;
+}
+#tree img{
+    height:300px;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;
 }
