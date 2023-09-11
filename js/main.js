@@ -7,7 +7,7 @@ const hungerBar = document.getElementById("hungV");
 
     let marginHorizontal = 0;
     let marginVertical = 0;
-    let marginChange = 300;
+    let marginChange = 600;
     // creating num for margins and the change nums
     let coordinates = [0];
     // coordinates in an array need a fix later but works fine upgrade!
@@ -102,7 +102,7 @@ setInterval(function(){
         //player died because of low hp (needs to be better soon) upgrade!
     }
     
-},1000)
+},10)
 //slowly starve later change to 3000
 
 function damage(dam){

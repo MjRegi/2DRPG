@@ -4,6 +4,9 @@
     grid-template-rows: repeat(10, 300px);
     place-items: center;
 }
+#map div{
+    border: 1px solid white;
+}
 body{
     background-color: black;
     margin: 0;
