@@ -82,6 +82,12 @@ let game = {
         hp:100,
         hunger:100,
         money:10
+    },
+    meals:{
+      lebakassemmel:{
+        hungerPoints:50,
+        healthPoints:60
+      }
     }
 }
 //creating an object with all things in the game
@@ -94,21 +100,40 @@ setInterval(function(){
         console.log("hunger death");
         // player dies because of hunger (needs to be better soon) upgrade!
     }
-    hpBar.innerHTML = game.player.hp;
-    //linking hp bar to hp in interval for constant refresh
-    if(game.player.hp <= 0){
-        location.reload();
-        console.log("hp death");
-        //player died because of low hp (needs to be better soon) upgrade!
-    }
-    
-},10)
+},10000);
 //slowly starve later change to 3000
+setInterval(function(){
+  hpBar.innerHTML = game.player.hp;
+  //linking hp bar to hp in interval for constant refresh
+  if(game.player.hp <= 0){
+      location.reload();
+      console.log("hp death");
+      //player died because of low hp (needs to be better soon) upgrade!
+  }
+  if(game.player.hunger > 100){
+    game.player.hunger = 100;
+  }
+  if(game.player.hp > 100){
+    game.player.hp = 100;
+  }
+  
+},10);
 
 function damage(dam){
     game.player.hp -= dam;
     return game.player.hp;
 }
 //creating function for damaging the player
+function heal(hp){
+  game.player.hp += hp;
+  return game.player.hp;
+}
+//creating function for healing the players hp
+function eat(meal){
+  game.player.hunger += meal.hungerPoints;
+  game.player.hp += meal.healthPoints;
+  return game.player.hunger,game.player.hp;
+}
+//creating functions for eating
 console.log("hunger " + game.player.hunger)
 console.log("hp " + game.player.hp)
