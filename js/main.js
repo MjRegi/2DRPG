@@ -1,10 +1,28 @@
+let game = {
+    player:{
+        hp:100,
+        hunger:100,
+        money:10
+    },
+    meals:{
+      lebakassemmel:{
+        hungerPoints:50,
+        healthPoints:60
+      }
+    }
+}
+//creating an object with all things in the game
 const player = document.getElementById("player");
 // creating player
 const hpBar = document.getElementById("hpV");
 const hungerBar = document.getElementById("hungV");
 //bars in the game
+const commadline = document.getElementById("commandline");
+//commandline in the game
+let commads = ["damage"];
 
-
+/*
+OLD MOVMENT MABY USE LATER
     let marginHorizontal = 0;
     let marginVertical = 0;
     let marginChange = 600;
@@ -76,21 +94,7 @@ function moveLeft(){
     return marginVertical
 }
 // creating movment
-
-let game = {
-    player:{
-        hp:100,
-        hunger:100,
-        money:10
-    },
-    meals:{
-      lebakassemmel:{
-        hungerPoints:50,
-        healthPoints:60
-      }
-    }
-}
-//creating an object with all things in the game
+*/
 
 setInterval(function(){
     game.player.hunger --
@@ -135,5 +139,13 @@ function eat(meal){
   return game.player.hunger,game.player.hp;
 }
 //creating functions for eating
+document.onkeydown = client => {
+    if (client.key == " "){
+        console.log("admit");
+        if(commadline.value == commads[0]){
+            damage(commadline.value.slice(8))
+        }
+    }
+}
 console.log("hunger " + game.player.hunger)
 console.log("hp " + game.player.hp)

@@ -1,24 +1,13 @@
-#map{
-    display: grid;
-    grid-template-columns: repeat(10, 300px);
-    grid-template-rows: repeat(10, 300px);
-    place-items: center;
-}
-#map div{
-    border: 1px solid white;
-}
 body{
     background-color: black;
     margin: 0;
+    display: flex;
 }
 #player img{
     height: 300px;
     image-rendering: pixelated;
     image-rendering: crisp-edges;
     image-rendering: -moz-crisp-edges;
-}
-#player{
-    z-index: 1;
 }
 #bar{
     color: white;
@@ -33,9 +22,8 @@ body{
     color: white;
     z-index: 100;
 }
-#tree img{
-    height:300px;
-    image-rendering: pixelated;
-    image-rendering: crisp-edges;
-    image-rendering: -moz-crisp-edges;
+#commands-tab{
+    margin-left: 5em;
+    margin-top: 5em;
+    border-right: 1px solid white;
 }
