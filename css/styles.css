@@ -23,7 +23,22 @@ body{
     z-index: 100;
 }
 #commands-tab{
-    margin-left: 5em;
-    margin-top: 5em;
-    border-right: 1px solid white;
+    padding-top: 5em;
+    padding-right: 20vw;
+    padding-bottom: 10em;
+    border-radius: 10px;
+    margin-left: 2em;
+    margin-top: 2em;
+    background-color: rgb(43, 45, 49);
+}
+#commands-tab input{
+    margin-left: 1em;
+    border-radius: 10px;
+    background-color: rgb(43, 45, 49);
+    transition: 0.5s;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: large;
+}
+#commands-tab input:focus{
+    background-color: white;
 }

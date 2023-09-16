@@ -22,7 +22,7 @@ const commadline = document.getElementById("commandline");
 let commads = ["m"];
 
 /*
-OLD MOVMENT MABY USE LATER
+OLD MOVMENT MEBY USE LATER
     let marginHorizontal = 0;
     let marginVertical = 0;
     let marginChange = 600;
@@ -121,7 +121,6 @@ setInterval(function(){
   if(game.player.hp > 100){
     game.player.hp = 100;
   }
-  
 },10);
 
 function damage(dam){
@@ -137,7 +136,7 @@ function heal(hp){
 function eat(meal){
   game.player.hunger += meal.hungerPoints;
   game.player.hp += meal.healthPoints;
-  return game.player.hunger,game.player.hp;
+  return game.player.hunger;
 }
 //creating functions for eating
 function move(){
@@ -151,8 +150,8 @@ function move(){
         eat(game.meals.lebakassemmel)
     }
 }
-document.onkeydown = client => {
-    if (client.key == " "){
+window.onkeydown = (event) => {
+    if (event.key == "Enter"){
         console.log("admit");
         if(commadline.value == commads[0]){
             console.log("move");
@@ -160,5 +159,7 @@ document.onkeydown = client => {
         }
     }
 }
+
+
 console.log("hunger " + game.player.hunger)
 console.log("hp " + game.player.hp)
