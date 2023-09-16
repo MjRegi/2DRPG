@@ -19,7 +19,7 @@ const hungerBar = document.getElementById("hungV");
 //bars in the game
 const commadline = document.getElementById("commandline");
 //commandline in the game
-let commads = ["damage"];
+let commads = ["m"];
 
 /*
 OLD MOVMENT MABY USE LATER
@@ -104,10 +104,11 @@ setInterval(function(){
         console.log("hunger death");
         // player dies because of hunger (needs to be better soon) upgrade!
     }
-},10000);
+},1000);
 //slowly starve later change to 3000
 setInterval(function(){
-  hpBar.innerHTML = game.player.hp;
+  hpBar.innerHTML = game.player.hp
+  hungerBar.innerHTML = game.player.hunger
   //linking hp bar to hp in interval for constant refresh
   if(game.player.hp <= 0){
       location.reload();
@@ -139,11 +140,23 @@ function eat(meal){
   return game.player.hunger,game.player.hp;
 }
 //creating functions for eating
+function move(){
+    let randomEvent = Math.floor(Math.random() * 3)
+    console.log(randomEvent);
+    if(randomEvent == 0){
+        damage(10);
+    } else if(randomEvent == 1){
+        damage(20);
+    } else if(randomEvent == 2){
+        eat(game.meals.lebakassemmel)
+    }
+}
 document.onkeydown = client => {
     if (client.key == " "){
         console.log("admit");
         if(commadline.value == commads[0]){
-            damage(commadline.value.slice(8))
+            console.log("move");
+            move();
         }
     }
 }
