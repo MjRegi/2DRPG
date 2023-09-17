@@ -19,7 +19,10 @@ const hungerBar = document.getElementById("hungV");
 //bars in the game
 const commadline = document.getElementById("commandline");
 //commandline in the game
+const eventV = document.getElementById("event");
+//the event thing in html
 let commads = ["m"];
+//all commands you can write in the input
 
 /*
 OLD MOVMENT MEBY USE LATER
@@ -143,7 +146,7 @@ function move(){
     let randomEvent = Math.floor(Math.random() * 3)
     console.log(randomEvent);
     if(randomEvent == 0){
-        damage(10);
+        eventV.innerHTML = '<img src="../assets/sprites/player-front.png" alt="player">';
     } else if(randomEvent == 1){
         damage(20);
     } else if(randomEvent == 2){

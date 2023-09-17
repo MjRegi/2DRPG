@@ -50,3 +50,13 @@ body{
 #commands-tab input:focus{
     background-color: white;
 }
+#event{
+    margin-left: 60vw;
+    margin-top: 20em;
+}
+#event img{
+    height: 250px;
+}
+#wold{
+    display: flex;
+}
