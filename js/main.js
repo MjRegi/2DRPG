@@ -146,7 +146,11 @@ function move(){
     let randomEvent = Math.floor(Math.random() * 3)
     console.log(randomEvent);
     if(randomEvent == 0){
-        eventV.innerHTML = '<img src="../assets/sprites/player-front.png" alt="player">';
+        eventV.innerHTML = '<img src="../assets/sprites/normal-slime.png" alt="normal-slime" id="slime">';
+        const slime = document.getElementById("slime");
+        //all types of slimes
+        slime.style.height = "100px"
+        slime.style.marginTop = "3em"
     } else if(randomEvent == 1){
         damage(20);
     } else if(randomEvent == 2){
