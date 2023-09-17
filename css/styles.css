@@ -1,10 +1,16 @@
 body{
     background-color: black;
     margin: 0;
-    display: flex;
+    background-image: url(../assets/sprites/background-spawn.png);
+    background-size: cover;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;
 }
 #player img{
-    height: 300px;
+    height: 250px;
+    margin-top: 15em;
+    margin-left: 10em;
     image-rendering: pixelated;
     image-rendering: crisp-edges;
     image-rendering: -moz-crisp-edges;
@@ -26,10 +32,12 @@ body{
     padding-top: 5em;
     padding-right: 20vw;
     padding-bottom: 10em;
+    margin-right: 100em;
     border-radius: 10px;
     margin-left: 2em;
     margin-top: 2em;
     background-color: rgb(43, 45, 49);
+    box-shadow: 1px 1px 1em 1em rgba(230, 235, 245, 0.418);
 }
 #commands-tab input{
     margin-left: 1em;
