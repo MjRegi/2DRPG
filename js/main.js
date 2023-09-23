@@ -21,7 +21,7 @@ const commadline = document.getElementById("commandline");
 //commandline in the game
 const eventV = document.getElementById("event");
 //the event thing in html
-let commads = ["m"];
+let commands = ["m","inv"];
 //all commands you can write in the input
 
 /*
@@ -151,21 +151,32 @@ function move(){
         //all types of slimes
         slime.style.height = "100px"
         slime.style.marginTop = "3em"
+        //spawnong the rightz slime texture
+
+        damage(10);
+        //slime doing damage
     } else if(randomEvent == 1){
         damage(20);
     } else if(randomEvent == 2){
         eat(game.meals.lebakassemmel)
     }
 }
+//random events every time you move
 window.onkeydown = (event) => {
     if (event.key == "Enter"){
         console.log("admit");
-        if(commadline.value == commads[0]){
+        if(commadline.value == commands[0]){
             console.log("move");
             move();
         }
+        //move function
+        if(commadline.value == commands[1]){
+            
+        }
+        //get into inventory
     }
 }
+//events for keyboard
 
 
 console.log("hunger " + game.player.hunger)
